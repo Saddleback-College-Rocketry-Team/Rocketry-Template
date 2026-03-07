@@ -10,7 +10,7 @@
         "group": "build"
     },
     { // Builds test files
-        "label": "Test Testfiles (native folder)",
+        "label": "Test Testfiles (test_main.cpp)",
         "type": "shell",
         "command": "pio",
         "args": ["test", "-e", "native"],
@@ -32,7 +32,7 @@
         "label": "Build Doxygen (Only works if installed on computer)",
         "type": "shell",
         "command": "doxygen",
-        "args": ["Doxyfile"]
+        "args": ["tools/Doxygen"]
     },
     { // Git Pull - no rebase
         "label": "Git Pull: Get Code from Github",

@@ -1,3 +1,9 @@
+/**
+ * @file test_main.cpp
+ * @brief file that will be to test things
+ * @date 2026-03-07
+ * 
+ */
 #include <unity.h>
 
 void setUp(void) {

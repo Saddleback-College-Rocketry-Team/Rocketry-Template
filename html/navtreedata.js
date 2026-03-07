@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Rocketry-Template", "index.html", [
+  [ "Rocketry Template", "index.html", [
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
@@ -37,7 +37,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"dir_68267d1309a1af8e8297ef4c3efbcdba.html"
+"df/d0a/main_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

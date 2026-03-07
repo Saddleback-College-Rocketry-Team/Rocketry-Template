@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['readme_2emd_0',['README.md',['../README_8md.html',1,'']]],
-  ['rocketry_20template_1',['Rocketry-Template',['../index.html',1,'']]]
+  ['setup_0',['setup',['../df/d0a/main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d',1,'main.cpp']]]
 ];
