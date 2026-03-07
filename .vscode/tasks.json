@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "PIO Build (teensy41)",
+      "type": "shell",
+      "command": "pio",
+      "args": ["run", "-e", "teensy41"],
+      "group": "build"
+    },
+    {
+      "label": "PIO Test (native)",
+      "type": "shell",
+      "command": "pio",
+      "args": ["test", "-e", "native"],
+      "group": "test"
+    },
+    {
+      "label": "PIO Upload (teensy41)",
+      "type": "shell",
+      "command": "pio",
+      "args": ["run", "-e", "teensy41", "-t", "upload"]
+    }
+  ]
+}
