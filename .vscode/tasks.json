@@ -2,39 +2,56 @@
 {
   "version": "2.0.0",
   "tasks": [
-    { // Builds main
+    {
         "label": "Build Code (main.cpp)",
         "type": "shell",
         "command": "pio",
-        "args": ["run"], //", "-e", "teensy41
+        "args": [
+            "run"
+        ],
         "group": "build"
     },
-    { // Builds test files
+    {
         "label": "Test Testfiles (test_main.cpp)",
         "type": "shell",
         "command": "pio",
-        "args": ["test", "-e", "native"],
+        "args": [
+            "test",
+            "-e",
+            "native"
+        ],
         "group": "test"
     },
-    { // Upload code to board
+    {
         "label": "Upload to Microcontroller",
         "type": "shell",
         "command": "pio",
-        "args": ["run", "-e", "teensy41", "-t", "upload"]
+        "args": [
+            "run",
+            "-e",
+            "teensy41",
+            "-t",
+            "upload"
+        ]
     },
-    { // Open serial montior
+    {
         "label": "Open Serial Monitor",
         "type": "shell",
         "command": "pio",
-        "args": ["device", "monitor"]
+        "args": [
+            "device",
+            "monitor"
+        ]
     },
-    { // Builds Doxygen
+    {
         "label": "Build Doxygen (Only works if installed on computer)",
         "type": "shell",
         "command": "doxygen",
-        "args": ["tools/Doxygen"]
+        "args": [
+            "tools/Doxygen"
+        ]
     },
-    { // Git Pull - no rebase
+    {
         "label": "Git Pull: Get Code from Github",
         "type": "shell",
         "dependsOn": [
@@ -43,7 +60,7 @@
         "dependsOrder": "sequence",
         "problemMatcher": []
     },
-    { // Git Add, Commit, Push
+    {
         "label": "Git Push: Save and Publish Your Code",
         "dependsOn": [
             "_git_stage_all",
@@ -52,41 +69,57 @@
             "_git_push"
         ],
         "dependsOrder": "sequence",
-        "problemMatcher": []
+        "problemMatcher": [],
+        "group": {
+            "kind": "test",
+            "isDefault": true
+        }
     },
-    { // Git Add
+    {
         "label": "_git_stage_all",
         "type": "shell",
         "command": "git",
-        "args": ["add", "-A"],
+        "args": [
+            "add",
+            "-A"
+        ],
         "hide": true,
         "problemMatcher": []
     },
-    { // Git Commit
+    {
         "label": "_git_commit_if_needed",
         "type": "shell",
         "command": "git",
-        "args": ["commit", "-m", "\"${input:commitMessage}\""],
+        "args": [
+            "commit",
+            "-m",
+            "\"${input:commitMessage}\""
+        ],
         "hide": true,
         "problemMatcher": []
     },
-    { // Git Pull 
+    {
         "label": "_git_pull_merge",
         "type": "shell",
         "command": "git",
-        "args": ["pull", "--no-rebase"],
+        "args": [
+            "pull",
+            "--no-rebase"
+        ],
         "hide": true,
         "problemMatcher": []
     },
-    { // Git Push
+    {
         "label": "_git_push",
         "type": "shell",
         "command": "git",
-        "args": ["push"],
+        "args": [
+            "push"
+        ],
         "hide": true,
         "problemMatcher": []
     }
-  ],
+],
   // Input Commit Message
   "inputs": [
     {

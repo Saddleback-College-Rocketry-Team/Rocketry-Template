@@ -5,6 +5,7 @@
  * 
  */
 #include <unity.h>
+#inlcude "transmitter.h"
 
 void setUp(void) {
 }
