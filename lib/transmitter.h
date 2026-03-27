@@ -30,9 +30,9 @@ public:
      */
     Transmitter(
         SerialT& serial,
-        long network,
-        long address,
-        unsigned long baudRate = 115200,
+        int network,
+        int address,
+        unsigned int baudRate = 115200,
     )
         : _serial(serial),
           _network(network),
