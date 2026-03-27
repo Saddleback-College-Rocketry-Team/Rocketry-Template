@@ -77,6 +77,11 @@ public:
         _serial.println(_address);
         
     }
+    void callToTransmitter(){
+        
+        _serial.print("AT+SEND=");
+        _serial.println(_address);
+    }
 
 private:
     SerialT& _serial;           /**< Serial interface */
